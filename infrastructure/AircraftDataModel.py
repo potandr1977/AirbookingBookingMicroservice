@@ -1,8 +1,6 @@
 from sqlalchemy import Column, Integer, Text
-from sqlalchemy.orm import DeclarativeBase
 
-
-class Base(DeclarativeBase): pass
+from di import Base
 
 class AircraftDataModel(Base):
     __tablename__ = 'aircraft'
