@@ -32,7 +32,7 @@ async def update_aircraft(
         velocity:int = 1840,
         session:AsyncSession = Depends(get_session)):
     repository = AircraftRepository(session)
-    await repository.update_aircraft(code,velocity)
+    await service.update_aircraft(code,velocity,repository)
 
 @router.get(
     '/dptest',
